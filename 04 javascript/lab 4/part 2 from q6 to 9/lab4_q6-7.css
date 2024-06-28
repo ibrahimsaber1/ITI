@@ -1,0 +1,63 @@
+
+:root {
+    --bcolor: rgb(212, 199, 236); /* background color if u want to cheack :)*/
+    --tcolor: rgb(40, 18, 90); /* title color if u want to cheack :)*/
+}
+
+body {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 50px 500px ; /* to make tim in the middel*/
+}
+
+/* --------------------------lab4 ------------ q6&7--- */
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+#registration-form {
+    border: 2px solid #333;
+    padding: 10px;
+    background-color: rgb(212, 199, 236);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.form_title {
+    background-color: var( --tcolor);
+    padding: 10px 10px;
+    color: #fff;
+    font-style: italic;
+    font-size: medium;
+}
+
+/* --------------------------lab4 ------------ q9--- */
+.calculator {
+    border: 2px solid #333;
+    padding: 10px;
+    background-color: var(--bcolor);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.calculator input {
+    width: 94%;
+    height: 40px;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 18px;
+    background-color: var(--bcolor)
+}
+.calculator button {
+    width: 21%;
+    height: 40px;
+    margin: 1%;
+    font-size: 18px;
+
+}
+.cac_title {
+    background-color: var( --tcolor);
+    padding: 10px 10px;
+    color: #fff;
+    font-style: italic;
+    font-size: medium;
+}

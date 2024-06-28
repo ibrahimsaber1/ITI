@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day4 lab answer</title>
+
+    <link rel="stylesheet" href="lab4_q6-7.css">
+    </head>
+<body>
+    <form id="registration-form" onsubmit="validateForm(event)">
+
+        <h2 class="form_title">registration form by ibrahim</h2>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your Name:" required
+        onfocus="this.style.border='solid 1px blue'" onblur="validateFullName()" style="background-color: rgb(212, 199, 236);">
+        <br>
+        <span id="fullname-error" class="error"></span>
+        
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required style="background-color: rgb(212, 199, 236);">
+        
+        <br><br>
+
+        <label for="city">City:</label>
+        <select id="city" name="city" style="background-color: rgb(212, 199, 236);">
+            <option value="Giza">Giza</option>
+            <option value="Alexandria">Alexandria</option>
+            <option value="EL HARAM">EL HARAM</option>
+            <option value="FAISAL">FAISAL</option>
+            <option value="Omrania">Omrania</option>
+            <option value="6-October">6-October</option>
+            <option value="Cairo">Cairo</option>
+        </select>
+        
+
+
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required style="background-color: rgb(212, 199, 236);">
+        
+        <br><br>
+
+        <label for="repeat-password">Repeat Password:</label>
+        <input type="password" id="repeat-password" name="repeat-password" required
+                onblur="validatePasswords()" style="background-color: rgb(212, 199, 236);"><br>
+        <span id="password-error" class="error"></span>
+        
+        <br><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I accept the terms and conditions</label>
+        
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+<hr><hr>
+<div class="calculator">
+    <h2 class="cac_title">JavaScript calculator by ibrahim</h2>
+    <input type="text" id="display" readonly>
+    <br>
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="performOperation('+')">+</button>
+    <br>
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="performOperation('-')">-</button>
+    <br>
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button onclick="performOperation('*')">*</button>
+    <br>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="appendToDisplay('.')">.</button>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="performOperation('/')">/</button>
+    <br>
+    <button onclick="calculateResult()" style="width: 94%;">=</button>
+</div>
+
+    <script src="lab4_q6-7.js"></script>
+</body>
+    </html>
+    
