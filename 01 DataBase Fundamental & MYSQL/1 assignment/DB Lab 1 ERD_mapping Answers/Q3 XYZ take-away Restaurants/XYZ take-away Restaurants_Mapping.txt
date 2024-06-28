@@ -1,0 +1,9 @@
+-- 3---  XYZ take-away Restaurants:
+
+Branch: #branch_id (PK), address, contact_number
+Staff: #EmployeeID(PK), fullname, city, region, role, joining_date, monthly_salary, branch_id (FK)
+Customer: #customer_code (PK), customer_name, contact_number
+Menu_Item: #item_code (PK), item_name, unit_price, item_category, branch_id (FK)
+Order: #order_id (PK), order_address, total_bill, date, time, customer_code (FK), delivery_National_ID (FK)
+OrderItem:  #item_code (PK), order_id (PK, FK), quantity
+DeliveryBoy: #delivery_National_ID (PK), national_id, name, contact_number

@@ -1,0 +1,15 @@
+-- 1 -- Medical Analysis Laboratory ERD
+
+Branch: (#BranchCode(PK), Branch_Name, City, Street, Building_No, Manager_ID)
+
+Test: (#TestCode(PK), Test_Name, Cost, Duration)
+
+Patient: (#PatientID (PK), Full_Name, Mobile_phone, DOB, Gender, Chronic_Diseases)
+
+Employee: (#EmployeeID (PK), FullName, Salary, Team, StartTime, EndTime, BranchCode (FK), SupervisorID (FK , U) )
+
+Visit: ((#BranchCode(FK), #PatientID(FK) ,#TestCode(FK)) , Date, Time)
+
+--------------------------------
+-----------------------------
+-------------------------------

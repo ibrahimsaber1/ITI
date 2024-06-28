@@ -1,0 +1,8 @@
+-- 4 -- International school database system
+
+Student: Student_serial_number (PK), full_name, gender, date_of_birth, completion_certificate, email, division
+MedicalReport: report_id (PK), weight, length, diseases, Student_serial_number (FK)
+Sibling: sibling_id (PK), serial_number (FK), discount_percent
+Parent: parent_id (PK), name, relationship , Student_serial_number (FK)
+Teacher: teacher_id (PK), name, subject, phone_number, email_address, monthly_salary, senior_teacher_id (FK, Nullable)
+Class: class_id (PK), class_name, location_building, location_floor, capacity, schedule

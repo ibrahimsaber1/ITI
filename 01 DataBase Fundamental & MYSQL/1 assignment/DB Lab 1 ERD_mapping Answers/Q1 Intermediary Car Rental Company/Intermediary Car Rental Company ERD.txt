@@ -1,0 +1,11 @@
+-- 1 -- Intermediary Car Rental Company ERD
+
+Office: (#OfficeID(PK), Address, ContactNo)
+
+Owner: (#Owner_NationalID(PK),Owner_Name, BankAccountNo, OfficeID (FK))
+
+Car: (#CarID(PK), CarStatus, RentAmount, car_License, Model, OwnerID (FK))
+
+Tenant: ((#Tenant_NationalID (PK), DrivingLicenseCopy, MobileNo))
+
+Transaction: (#CarID (FK), #TenantID (FK), StartDate, Duration, PaymentMethod)

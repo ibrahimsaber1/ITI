@@ -1,0 +1,57 @@
+## 1.	Dream Home Company 
+> 0nf : default 
+Customer_rental_table [#customer_num, cus_name, property_num, p_address	, rent_satart, rent_finish, rent, owner_num, owner_name]
+
+------------
+> 1nf {Multi values attributes - Composite attributes - Repeating Groups (Multi Values + related attributes ) }
+
+Customers[#customer_num, cus_name]
+Customers_propertes[#customer_num,#property_num, p_address, rent_satart, rent_finish, rent, owner_num, owner_name]
+
+-----------------------------------
+> 2nf { Partial dependency = attribute depend Partially on composite key attribute }
+
+Customers[#customer_num, cus_name]
+Customers_propertes[#customer_num, #property_num, rent_satart, rent_finish, rent]
+properties[#property_num ,p_address,owner_num, owner_name]
+
+
+-----------------------------------
+> 3nf{ Transitive [ Fake dependency ] :> Attribute depend on a NON PK. Key Attribute }
+
+Customers[#customer_num, cus_name]
+Customers_propertes[#customer_num, #property_num, rent_satart, rent_finish, rent]
+properties[#property_num ,p_address,owner_num(fk)]
+owner[#owner_num (pk), owner_name]
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+## 2.	organization projects
+> 0nf : default 
+project_employees [#project_num, project_name, employees _num, employees_name , job_class, chg_hour, hour_billed, total_charge]
+
+------------
+> 1nf {Multi values attributes - Composite attributes - Repeating Groups (Multi Values + related attributes ) }
+
+projects [#project_num, project_name]
+project_employees [#project_num, #employees_num, employees_name , job_class, chg_hour, hour_billed]
+
+-----------------------------------
+> 2nf { Partial dependency = attribute depend Partially on composite key attribute }
+
+
+projects [#project_num, project_name]
+project_employees [#project_num, #employees_num(fk), hour_billed]
+employee [#employees_num (pk), employees_name , job_class,chg_hour]
+
+-----------------------------------
+> 3nf{ Transitive [ Fake dependency ] :> Attribute depend on a NON PK. Key Attribute }
+
+projects [#project_num, project_name]
+project_employees [#project_num, #employees_num(fk), hour_billed]
+employee [#employees_num (pk), employees_name , job_class(fk)]
+hour_chg[#job_class, chg_hour]
+
