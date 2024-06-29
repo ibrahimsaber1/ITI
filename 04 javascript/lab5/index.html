@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Lab5</title>
+    <style>
+        /* i just want to arrang the page :) */
+        body { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Question 1 & 2: Login Form with Remember Me -->
+    <h2>Question 1 & 2</h2>
+    <form action="#" onsubmit="saveData(event)">
+        <label for="fullName">Full Name:</label>
+        <br><br>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your fullname">
+        <br><br>
+        <label for="password">Password:</label>
+        <br><br>
+        <input type="password" id="password2" name="password">
+        <br><br>
+        <button type="submit" id="registerButton">Login</button>
+        <label>
+            <input type="checkbox" id="check" name="check">
+            Remember me!
+        </label>
+        <br>
+    </form>
+
+    
+    <!-- Question 5: AJAX using test API -->
+    <h2>Question 5 AJAX using test API</h2>
+    <input type="text" name="retrieve" id="retrieve" placeholder="Enter user ID">
+    <button onclick="displayUser()">Display</button>
+    <br><br>
+    <select name="select-names" id="dropdown">
+        <option value="Select A Name" disabled selected>Select A Name</option>
+    </select>
+    <div class="container">
+        <p id="id"></p>
+        <p id="first-name"></p>
+        <p id="last-name"></p>
+        <img alt="" width="100" height="100" id="image">
+    </div>
+    
+    <!-- Question 6: Validate Input -->
+    <h2>Question 6</h2>
+    <button onclick="validateInput()">Check Info</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
