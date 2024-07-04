@@ -17,7 +17,7 @@ function validateFullName() {
         return true;
     }
 }
-
+// i add this line to cheak the connection its has nothing to do with the code
 function validatePasswords() {
     const passwordInput = document.getElementById('password');
     const repeatPasswordInput = document.getElementById('repeat-password');
