@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ $# -eq 2 ]; then
+    cp "$1" "$2"
+elif [ $# -gt 2 ]; then
+    target_dir=${!#}
+    for file in "${@:1:$#-1}"; do
+        cp "$file" "$target_dir"
+    done
+else
+    echo "Usage: $0 source_file target_file OR $0 source_file1 source_file2 ... target_directory"
+fi
