@@ -1,0 +1,12 @@
+#!/bin/bash
+
+backup_dir="/home/ibrahim/backup"
+
+# Create backup directory if it does not exist
+mkdir -p "$backup_dir"
+
+for file in /home/ibrahim/*; do
+    if [[ -f "$file" ]]; then
+        cp "$file" "$backup_dir"
+    fi
+done

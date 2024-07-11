@@ -1,0 +1,245 @@
+
+
+
+
+
+
+#THIS IS'T LAB SOLUTION IT'S MY NOTES FROM LECTURE :)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#!/bin/bash
+# read -p 'enter name: ' name
+shopt -s extglob
+
+
+# 1- if u want to cheak the user
+# read -p 'enter name: ' name
+# case $name in
+# "ibrahim")
+# echo "hello boss"
+# ;;
+# "mo")
+# echo "hello mo"
+# ;;
+# *) UNKNOWN USER
+# esac
+
+
+# 2- if u want to cheak the input characters
+
+# 3- if u want to cheak the input characters and enable spaces ---->> [[:space:]] :)
+
+# read -p 'enter name: ' name
+
+# case $name in
+# +([a-z]||[[:space:]]))
+# echo "small characters with space" 
+# ;;
+# +([A-Z]))
+# echo "LARG characters" 
+# ;;
+# +([0-9]))
+# echo "numbers" 
+# ;;
+# +([a-zA-Z]))
+# echo "mixed characters" 
+# ;;
+# +([a-zA-Z0-9]))
+# echo "mixed characters and numbers" 
+# ;;
+# esac
+
+
+
+## while syntax :)
+
+# num=0;
+# while [ $num -lt 11 ]
+# do
+# echo $num "hi"
+# ((num++))
+# done
+
+
+# declare -i num=0;
+# while [ $num -lt 10 ]
+# do
+# echo $num
+# num+=1
+# done
+
+
+## until syntax its the opposet of while :)
+
+# declare -i num=0;
+# until [ $num -gt 10 ] # this mean until the num is false :) or greate than 10 loop
+# do
+# echo $num
+# num+=1
+# done
+
+
+# for cindition :)
+
+# for ((i=0;i<5;i++))
+# do 
+# echo $i
+# done
+
+# while true
+# do
+# read -p 'enter name: ' name
+# case $name in
+# +([a-z]||[[:space:]]))
+# echo "small characters with space" 
+# ;;
+# +([A-Z]))
+# echo "LARG characters" 
+# ;;
+# +([0-9]))
+# echo "numbers" 
+# ;;
+# +([a-zA-Z]))
+# echo "mixed characters" 
+# ;;
+# +([a-zA-Z0-9]))
+# echo "mixed characters and numbers" 
+# ;;
+# # To braek from this loop write exit --->
+# # "exit") # but this is hard for the user so
+# # break
+# # ;;
+# # to make exit easy for the user --->
+# +[eE][xX][iI][tT])
+# break
+# ;;
+# esac
+# done
+
+
+
+# for i in {1..9..2}
+# do
+# echo $i
+# done
+
+
+# PS3="enter value#? "
+# select i in $(cut -d: -f1 /etc/passwd)
+# do 
+# case $i in
+# "exit"|"4")
+# braek
+# ;;
+# "ibrahim")
+# echo "hello boss"
+# ;;
+# *)
+# echo UNKNOWN USER
+# ;;
+# esac
+# done
+
+
+# read -p "pleas enter array size: " size
+
+# declare -a arr;
+# declare -i sum;
+# for ((i=0;i<size;i++))
+# do
+# read -p "pleas enter value " arr[$i]
+# sum+= ${arr[@]}
+# done
+# echo ${arr[@]}
+# echo the sum is: $sum
+
+########################################################
+########################################################
+########################################################
+
+#functions
+
+# function addition(){
+#     ((sum=6+8))
+#     return $sum
+# }
+
+# addition
+# result=$?
+# echo $result
+
+########################################################
+
+# function addition2(){
+#     ((sum=6+8))
+#     echo "hello"
+
+# echo $sum
+#     #return $sum
+# }
+# result=$(addition2)
+# echo $result
+
+
+########################################################
+
+# function addition3(){
+#             ((sum=$1+$2))
+#             return $sum
+# }
+
+# addition3 5 6
+# echo $?
+
+
+
+# function addition3(){
+#             echo $4
+#             ((sum=$1+$2))
+#             return $sum
+# }
+
+# addition3 5 6 $1
+# echo $?
+
+
+# function addition3(){
+#             ((sum=$1+$2))
+#             return $sum
+# }
+
+# addition3 $1 $2
+# echo $?
+
+##########################3
+
+# read -p 'enter name: ' char
+# case $char in
+# +([a-z]))
+# echo "Lower Case" 
+# ;;
+# +([A-Z]))
+# echo "Upper Case" 
+# ;;
+# +([0-9]))
+# echo "numbers" 
+# ;;
+# +([a-zA-Z]))
+# echo "mixed characters upper and lower" 
+# ;;
+# +([a-zA-Z0-9]))
+# echo "mixed characters and numbers" 
+# ;;
+# esac

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "How many elements do you want to enter in the array?"
+read n
+
+declare -a arr
+
+for (( i=0; i<$n; i++ ))
+do
+    echo "Enter element $((i+1)):"
+    read element
+    arr[i]=$element
+done
+
+echo "The array elements are: ${arr[@]}"

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+read -p 'enter Enter a character: ' char
+case $char in
+[a-z])
+echo "Lower Case" 
+;;
+[A-Z])
+echo "Upper Case" 
+;;
+[0-9])
+echo "numbers" 
+;;
+"")
+echo "Nothing"
+;;
+*)
+echo "Invalid input"
+;;
+esac

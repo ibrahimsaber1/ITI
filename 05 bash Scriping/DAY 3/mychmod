@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for item in /home/ibrahim/*; do
+    chmod +x "$item"
+done
+
+
