@@ -11,7 +11,7 @@ function App() {
           image={record.image} 
           className="custom-card"
         >
-          <button className=''>Add to Cart</button>
+          <button>Add to Cart</button>
           <button>Wishlist</button>
         </ProductCard>
       ))}
