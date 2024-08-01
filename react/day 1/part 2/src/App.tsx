@@ -13,6 +13,7 @@ function App() {
         >
           <button>Add to Cart</button>
           <button>Wishlist</button>
+          <button>Remove</button>
         </ProductCard>
       ))}
     </main>

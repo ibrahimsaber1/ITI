@@ -6,7 +6,7 @@ interface ProductCardProps extends ComponentProps<'div'> {
   image: string;  
 }
 
-const ProductCard = ({ name, price = 'N/A', image, children, ...props }) => {
+const ProductCard = ({ name, price = 'N/A', image, children, ...props }: ProductCardProps) => {
   return (
     <div className="product-card" {...props}>
 
