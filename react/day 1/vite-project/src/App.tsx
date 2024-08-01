@@ -9,7 +9,9 @@ function App() {
 
   return (
     <main>
-      <h1>home</h1>
+    <Product />
+    <Product />
+    <Product />
     <Product />
     </main>
   )
