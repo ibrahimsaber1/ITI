@@ -4,6 +4,7 @@ import ProductCard from './components/ProductCard';
 function App() {
   return (
     <main className='container'>
+
       {data.map(record => (
         <ProductCard 
           name={record.name}
@@ -16,6 +17,7 @@ function App() {
           <button>Remove</button>
         </ProductCard>
       ))}
+      
     </main>
   )
 }

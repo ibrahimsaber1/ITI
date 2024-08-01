@@ -7,11 +7,18 @@ interface ProductCardProps extends ComponentProps<'div'> {
 }
 
 const ProductCard = ({ name, price = 'N/A', image, children, ...props }: ProductCardProps) => {
+  
+  let img = null ;
+  if(image){
+    img = <img src={image} alt={`${name} image`} className="product-image" />
+
+  }
+
   return (
     <div className="product-card" {...props}>
 
-      <img src={image} alt={`${name} image`} className="product-image" />
-
+      {img}
+      
       <h2 className="product-name">{name}</h2>
       
       <p className="product-price">{price}</p>
