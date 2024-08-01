@@ -27,7 +27,7 @@ const ProductCard = ({ name, price, image, children, ...props }: ProductCardProp
 
       <div className="product-children">
 
-        {children}
+        {Boolean(price) && children}
       </div>
     </div>
   );
