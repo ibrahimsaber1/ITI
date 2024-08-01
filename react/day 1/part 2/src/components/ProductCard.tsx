@@ -6,13 +6,15 @@ interface ProductCardProps extends ComponentProps<'div'> {
   image: string;  
 }
 
-const ProductCard = ({ name, price = 'N/A', image, children, ...props }: ProductCardProps) => {
+const ProductCard = ({ name, price, image, children, ...props }: ProductCardProps) => {
   
   let img = null ;
   if(image){
     img = <img src={image} alt={`${name} image`} className="product-image" />
-
+  }else{
+    img= <h3>Image Not Found :)</h3>
   }
+
 
   return (
     <div className="product-card" {...props}>
@@ -21,7 +23,7 @@ const ProductCard = ({ name, price = 'N/A', image, children, ...props }: Product
       
       <h2 className="product-name">{name}</h2>
       
-      <p className="product-price">{price}</p>
+      <p className="product-price">{Boolean(price)? price : "this item not avilable currently"}</p>
 
       <div className="product-children">
 
