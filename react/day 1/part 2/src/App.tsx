@@ -7,6 +7,7 @@ function App() {
 
       {data.map(record => (
         <ProductCard 
+          key={record.id}
           name={record.name}
           price={record.price} 
           image={record.image} 
