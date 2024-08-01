@@ -15,9 +15,11 @@ function App() {
 
   return (
     <main>
-    <Product title="product1" price="200$" desc="pro1 description"/>
-    <Product title="product2" price="205$" desc="pro2 description"/>
-    <Product title="product3" price="105$" />
+      {Products.map(opj => {
+        return (
+          <Product {...opj}/> 
+        )
+      })}
 
 
     </main>
