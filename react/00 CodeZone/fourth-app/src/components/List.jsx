@@ -1,23 +1,27 @@
-import { useEffect } from "react";
-import Products_data from "../products";
+import { useEffect, useState } from "react";
 import Product from "./Product";
 
 function List() {
+
+  const [Products, SetProducts] = useState([])
+
   useEffect(()=>{
     fetch('https://dummyjson.com/products')
     .then((res) => res.json())
-    .then((data)=>console.log(data));
-  }
+    .then((data)=>SetProducts(data.products))
+    .catch((error) => console.error('Error fetching products:', error));  // Error handling;
+  },[]
 )
 
-  const products = Products_data.map((product) => {
-    return product.price < 50? <Product product={product} key={product.id}/> : null
+  const productsdata = Products.map((product) => {
+    return <Product product={product} key={product.id}/> 
     ;
   });
   return <div className="products">
-    {products}
+    {productsdata}
     </div>;
 }
 
 export default List;
+
 
