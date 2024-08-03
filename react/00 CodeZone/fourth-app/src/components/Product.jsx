@@ -1,15 +1,15 @@
-function Product(props) {
-  const { title, price, description, images } = props.product;
+function Product(props){
+    return (
 
-  return (
-    <div className="product-cart">
-      {/* Select the first image in the array */}
-      <img src={images[0]} alt={title} width={150} />
-      <h4>{title}</h4>
-      <h4>${price.toFixed(2)}</h4> {/* Format price to two decimal places */}
-      <p>{description}</p>
-    </div>
-  );
+        <div  className="product-cart">
+        <img src={props.product.images[0]} alt="Product" width={150} height={150}/>
+      <h4>{props.product.title}</h4>
+      <h4>{props.product.price}</h4>
+      <p>{props.product.description}</p>
+      </div>
+    )
 }
 
-export default Product;
+export default Product
+
+
